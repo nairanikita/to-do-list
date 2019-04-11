@@ -1,0 +1,145 @@
+ 
+ body{background-image: url(i7.jpg);
+ }
+ .back{position: relative;
+
+    background-image: url(donut.jpg);
+    
+    max-width: 300px;
+    height:400px;
+    background-size:cover;
+    background-repeat: no-repeat;
+
+    border:10px dimgray;
+    opacity: 1;
+
+}
+#add{
+    background-color: palevioletred;
+    font-family: cursive;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+.item{
+    
+    font-family:cursive;
+
+    opacity: 0.8;
+}
+.item :hover{
+    background-image:url(i3.jpg);
+}
+
+.headi{
+    /*background-image: url(i2.jpg);*/
+    background-size: cover;
+    max-width: 600px;
+    background-blend-mode: luminosity;
+    height:100px;
+    background-repeat: no-repeat;
+    text-align: center;
+    font-family:cursive;
+    font-size: 40px;
+    border-radius: 20px;
+    border:solid 5px rgb(165, 42, 104);
+    
+}
+.item2{
+    max-width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    border:solid 2px rgb(170, 62, 89);
+    pointer-events: painted;
+
+}
+#save{
+    position: relative;
+    bottom:400px;
+    left: 850px;
+    padding: 0px;
+}
+#save :hover #r1{
+    display:block;
+}
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 30px;
+    padding: 2px 16px 12px 16px;
+  }
+  ul li{
+      height:50px; 
+      position: relative;
+      margin-bottom: 5px;
+  }
+  ul li :hover{
+      background-color: crimson;
+      border: 2px black;
+  }
+.close:hover {
+    background-color:dimgray;
+    color: white;
+  }
+#del{
+    position: relative;
+    bottom:400px;
+    left: 850px;
+    padding: 0px;
+}
+#todolist{
+    /*font-family: cursive;
+    max-width:350px;
+    opacity: .8;
+    height:40px;
+    font-size: 20px;
+    font-weight: bold;
+    border:bold 4px black;
+    filter: blur(50px);
+    background-color: rgb(99, 184, 240);*/
+    list-style: none;
+    
+}
+.txt{
+    
+    padding: 3px;
+}
+li{
+    font-family: cursive;
+    max-width:1000px;
+    
+    opacity: .8;
+    height:60px;
+    font-size: 25px;
+    background-size:cover;
+    font-weight: bold;
+    /*filter: blur(50px);*/
+    background-color: rgb(99, 184, 240);
+    border-radius: 2px;
+    scrollbar-arrow-color: crimson;
+
+    
+    overflow-x: visible;
+    overflow-y: auto;
+    
+    
+}
+-webkit-scrollbar {
+    width: 30px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background:palevioletred; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}

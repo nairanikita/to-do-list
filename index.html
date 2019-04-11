@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="Pen.png">
+        <title>Tooooodle</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="todo.css">
+    
+    </head>
+    <body>
+        <br>
+        <br>
+        <div class="container headi" >
+            Ooooooo Tooodles
+        </div>
+        <br>
+        
+          <div class="back border rounded container">
+              
+              <input type="text" id="add" class="form-control item text-sm-center text-md-center form-group " placeholder="get busy today!!">
+
+            
+              
+              <ul id="todolist" class="container">
+              </ul>
+        
+          </div>
+          <div class="btn-group-vertical container flex-column">
+                <input type="image" src="don.jpg" onclick="join()" class="btTxt submit flex-column item2 btn btn-danger"   id="save" >
+                
+                <input type="image" src="eatdonu.jpg" onclick="clean()" class="btTxt submit flex-column item2 btn btn-danger" id="del">
+                   
+          </div>
+          <div id="r1">
+              click to add todo
+          </div>
+        
+        <script>
+          var input=document.getElementById("add");
+
+            input.addEventListener("keyup", function(event) {
+              event.preventDefault();
+             if (event.keyCode === 13) {
+                document.getElementById("save").click();
+                 }
+                 });
+          var i;
+           for (i = 0; i < myNodelist.length; i++) {
+           var span = document.createElement("SPAN");
+           var txt = document.createTextNode("\u00D7");
+           span.className = "close";
+           span.appendChild(txt);
+           myNodelist[i].appendChild(span);
+           }
+          function clean()
+          {
+          input.value="";
+          }
+          
+          function join()
+          {
+              
+               
+                  if(input.value==="")
+                {
+                    alert("please enter a tooodle");
+                }
+                if(input.value!="")
+                {
+                     let val1=input.value;
+                     let text=document.createTextNode(val1);
+                     let newitem=document.createElement("li");
+                     
+                    text.className="txt";
+                     newitem.appendChild(text);
+                     document.getElementById("todolist").appendChild(newitem);
+
+                     var span = document.createElement("SPAN");
+                     var txt = document.createTextNode("\u00D7");
+                     span.className = "close";
+                     span.appendChild(txt);
+                     newitem.appendChild(span);
+
+                     var close = document.getElementsByClassName("close");
+
+                    for (i = 0; i < close.length; i++)
+                    {
+                    close[i].onclick = function() 
+                    {
+                    var div = this.parentElement;
+                    div.style.display = "none";
+                    }
+
+                    }
+          
+                    
+
+
+                
+                input.value="";
+                }
+                
+          }
+          
+          
+        </script>
+          
+         
+          
+
+
+    </body>
+</html>
